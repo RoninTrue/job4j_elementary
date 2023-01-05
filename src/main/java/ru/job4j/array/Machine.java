@@ -6,11 +6,11 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] rsl = new int[100];
         int size = 0;
-        int changeMoney = money - price;
-        for (int i = 0; i < coins.length; i++) {
-            while (changeMoney >= coins[i]) {
-                rsl[size] = coins[i];
-                changeMoney -= coins[i];
+        int change = money - price;
+        for (int coin : coins) {
+            while (change >= coins[coin]) {
+                rsl[size] = coins[coin];
+                change -= coins[coin];
                 size++;
             }
         }
