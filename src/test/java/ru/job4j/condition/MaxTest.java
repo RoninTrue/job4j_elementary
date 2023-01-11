@@ -6,38 +6,35 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MaxTest {
 
     @Test
-    void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
+    public void whenMax1and2Then2() {
+        Max max = new Max();
+        int one = 1;
+        int two = 2;
+        int result = max.max(one, two);
         int expected = 2;
         assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenMax6To3Then6() {
-        int left = 6;
-        int right = 3;
-        int result = Max.max(left, right);
+    public void whenMax6and4and3Then6() {
+        Max max = new Max();
+        int one = 6;
+        int two = 4;
+        int three = 3;
+        int result = max.max(one, two, three);
         int expected = 6;
         assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenMax3To8Then8() {
-        int left = 3;
-        int right = 8;
-        int result = Max.max(left, right);
-        int expected = 8;
-        assertThat(result).isEqualTo(expected);
-    }
-
-    @Test
-    void whenMax4To4Then4() {
-        int left = 4;
-        int right = 4;
-        int result = Max.max(left, right);
-        int expected = 4;
+    void whenMax3and8and12and20Then20() {
+        Max max = new Max();
+        int one = 3;
+        int two = 8;
+        int three = 12;
+        int four = 20;
+        int result = max.max(one, two, three, four);
+        int expected = 20;
         assertThat(result).isEqualTo(expected);
     }
 }
