@@ -31,4 +31,13 @@ public class PointTest {
         double expected = 8;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void when4and25and4To4and25and16Then12() {
+        Point point = new Point(4, 25, 4);
+        Point another = new Point(4, 25, 16);
+        double result = point.distance3d(another);
+        double expected = 12;
+        assertThat(result).isEqualTo(expected);
+    }
 }
